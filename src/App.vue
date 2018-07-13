@@ -1,13 +1,30 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <!-- <div id="app"> -->
+    <div>
+    <!-- <img src="./assets/logo.png"> -->
+    <header-item></header-item>
+    <div class="tab">
+      <div class="tab-item">
+        <a router-link="{path:'/goods'}">商品</a>
+      </div>
+      <div class="tab-item">
+        <a router-link="{path:'/ratings'}">评论</a>
+      </div>
+      <div class="tab-item">
+        <a router-link="{path:'/seller'}">商家</a>
+      </div>
+    </div>
     <router-view/>
   </div>
 </template>
 
 <script>
+import headerItem from './components/header/header'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    headerItem
+  }
 }
 </script>
 
